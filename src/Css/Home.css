@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+div {
+    font-family: "Poppins", sans-serif;
+}
+
+#hp1s1 h1 {
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+#hero {
+    animation: move 1.5s linear infinite alternate;
+}
+
+#homeHead {
+    width: calc(100% - 120px);
+    margin: auto;
+}
+
+#nurse{
+    display: none;
+}
+
+@keyframes move {
+    from {
+        top: -10px;
+    }
+
+    to {
+        top: 10px;
+    }
+}
+
+#upcase {
+    text-transform: uppercase;
+}
+
+#movinganime {
+    animation: movinganime 10s linear infinite;
+}
+
+@keyframes movinganime {
+    from {
+        transform: translateX(0vw)
+    }
+
+    to {
+        transform: translateX(-100vw)
+    }
+}
+
+@media (max-width:1250px) {
+
+    div .circle {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #movinganime {
+        font-size: 70px;
+    }
+
+    #homeHead {
+        width: calc(100% - 20px);
+
+    }
+
+    #message {
+        padding: 0px 10px;
+    }
+
+    #message .input {
+        width: 49%;
+    }
+
+    #hp1s1 {
+        padding-left: 50px;
+    }
+
+    #hero {
+        left: 64%;
+    }
+}
+
+@media (max-width:1142px) {
+    #whoweare {
+        justify-content: space-between;
+    }
+
+    #whoweare #text {
+        width: 60%;
+    }
+
+    #biography img {
+        object-fit: cover;
+        max-width: 400px;
+        transform: translateX(-30px);
+    }
+}
+
+@media (max-width:1088px) {
+    #upcase {
+        height: 170px;
+    }
+}
+
+@media (max-width:1000px) {
+
+    #hp1s1 {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width:866px) {
+    #whoweare {
+        flex-direction: column;
+        margin: 100px 0 0 0;
+    }
+
+    #whoweare #text {
+        width: 100%;
+        padding-left: 60px;
+    }
+
+    #biography {
+        width:100%;
+    }
+#background{
+    left:50%;
+    top:-20%;
+    width:700px;
+}
+    
+}
+
+@media (max-width:852px) {
+    #upcase {
+        height: 140px;
+    }
+
+    #departments ul {
+        row-gap: 40px;
+        font-size: 14px;
+    }
+
+    #hp1s1 {
+        width: 450px;
+  
+    }
+
+    #hero {
+        transform: translate(0, -10px);
+        left: 60%;
+    }
+
+}
+
+@media (max-width:720px) {
+    #hp1s1 {
+        width: 100%;
+        padding: 20px 10px 0px 10px;
+        text-align: center;
+    }
+
+    #hp1s1 p {
+        display: none;
+    }
+
+    #hero {
+        position: relative;
+        left: 0;
+
+    }
+
+    .images2 {
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #whoweare {
+        margin: -40px 0 0 0;
+    }
+    #biography {
+       display: none;
+    }
+    #whoweare #text {
+        width: 100%;
+        padding: 20px ;
+        text-align: justify;
+    }
+    #background{
+        left:40%;
+        top:-15%;
+        width:700px;
+    }
+}
+
+
+@media (max-width:762px) {
+
+    #upcase {
+        width: 44%;
+        height: 200px;
+    }
+
+    #upcase:hover {
+        transform: scale(1.03);
+    }
+
+    #departments ul {
+        justify-content: space-around;
+
+    }
+
+    #departments h1 {
+        margin-left: 3%;
+    }
+}
+
+@media (max-width:620px) {
+    div .circle {
+        width: 20px;
+        height: 20px;
+        margin: 0px 20px;
+        transform: translateY(-2px);
+    }
+
+    #upcase {
+        height: 150px;
+    }
+
+    #movinganime {
+        margin: 50px 0px;
+        font-size: 40px;
+        animation-duration: 8s;
+    }
+    #background{
+        left:200px;
+        top:-15%;
+        width:500px;
+    }
+
+
+}
+
+
+@media (max-width:464px){
+    #background{
+      display: none;
+    }
+    #text{
+ transform: translateY(-60px);
+    }
+    #movinganime{
+        margin: 0px 0px 50px 0px  ;
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-width:404px) {
+    #departments h1 {
+        margin-left: 1%;
+    }
+
+    #upcase {
+        height: 130px;
+        width: 48%;
+    }
+
+    #departments ul {
+        justify-content: space-between;
+
+    }
+    #hp1s1 {
+        padding: 0px;
+    }
+    #hp1s1 h1{
+        font-size: 28px;
+    }
+}
+
+
+
+@media (max-width:310px) {
+    #upcase {
+        height: 120px;
+    }
+}

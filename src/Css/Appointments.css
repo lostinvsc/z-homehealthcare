@@ -1,0 +1,169 @@
+#facility {
+    background-size: 37px;
+}
+
+@media (max-width:1125px) {
+    #sec1 {
+        padding: 0 20px;
+    }
+
+    #sec1img {
+        margin: 0;
+    }
+
+    #appform {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width:894px) {
+    #sec1 .sec1d1 {
+        width: 100%;
+    }
+
+    #sec1 .sec1d1 h1 {
+        width: 60%;
+    }
+
+    #sec1 .sec1d1 p {
+        text-align: justify;
+    }
+
+    #sec1img {
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        width: 370px;
+    }
+
+    #appform form .input {
+        width: 49%;
+    }
+    #gender, #age{
+        width: 49%;
+    }
+
+    #ga {
+        width: 49%;
+    }
+
+    #disease {
+        width: 49%;
+    }
+}
+
+@media (max-width:798px) {
+    #sec1img {
+        top: 150px;
+        right: 30px;
+        width: 370px;
+    }
+
+    #dga {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #disease,
+    #ga {
+        width: 100%;
+    }
+
+    #ga {
+
+        width: 100%;
+    }
+
+    .desease {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:715px) {
+    #sec1img {
+        top: 150px;
+        right: 0px;
+        width: 330px;
+    }
+}
+
+@media (max-width:645px) {
+    #sec1img {
+        top: 470px;
+        right: 0px;
+        width: 330px;
+    }
+
+    br {
+        display: none;
+    }
+
+    #sec1 .sec1d1 h1 {
+        width: 100%;
+
+    }
+
+
+}
+
+@media (max-width:600px) {
+    #sec1img {
+        top: 470px;
+        right: 0px;
+        width: 330px;
+    }
+
+    #appform {
+        margin-top: 190px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:533px) {
+
+    #sec1img {
+        top: 500px;
+        width: 100%;
+    }
+
+    #sec1img img {
+        width: 330px;
+        margin: auto;
+    }
+
+    #appform {
+        margin-top: 230px;
+    }
+}
+
+@media (max-width:501px) {
+    #sec1img {
+        top: 00px;
+        width: 100%;
+    }
+}
+@media (max-width:429px){
+#name{
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+#appform #name input{
+  width: 100%;
+
+}
+}
+@media (max-width:384px){
+#ga{
+    flex-direction: column;
+    gap: 20px;
+}
+#gender,#age {
+    width: 100%;
+}
+#appform{
+    font-size:15px;
+}
+
+}

@@ -1,0 +1,45 @@
+#msignup{
+    width:min(600px , 100vw)
+}
+
+select{
+    appearance: none;
+
+    background-image: url('../../public/down.svg');
+    background-position:97% 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+@media (max-width:633px) {
+    #msignup{
+       width: 95vw;
+       margin:140px auto;
+    }
+    select{
+        background-size: 30px;
+        background-position:97% 4px;
+    }
+    
+}
+@media (max-width:435px) {
+   #sd1,#sd2,#sd3,#sd4{
+    flex-direction: column;
+    gap:15px;
+   }
+   #sform{
+    gap:15px;
+   }
+   
+   #sd1 input,#sd2 input,#sd3 select , #sd3 div,#sd4 input{
+    width: 100%;
+   }
+   #sd3 select{
+    height:40px;
+   }
+   #msignup{
+    text-align: center;
+}
+
+    
+}

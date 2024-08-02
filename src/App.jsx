@@ -6,7 +6,6 @@ import Navbar from './Components/Navbar.jsx'
 import Signup from './Pages/Signup.jsx'
 import Login from './Pages/Login.jsx'
 import Appointments from './Pages/Appointments.jsx'
-import About from './Pages/About.jsx'
 import Cookies from 'js-cookie'
 
 const App = () => {

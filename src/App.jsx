@@ -8,6 +8,7 @@ import Login from './Pages/Login.jsx'
 import Appointments from './Pages/Appointments.jsx'
 import Cookies from 'js-cookie'
 
+
 const App = () => {
   const [cookie, setCookie] = useState()
   const [toggle, setToggle] = useState(false)

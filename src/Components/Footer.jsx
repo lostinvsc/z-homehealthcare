@@ -60,11 +60,11 @@ const Footer = () => {
                 <span className='flex items-center gap-[10px] text-[15px] '><img src={call} className='w-[30px]' alt="" /> <a href="tel:9413917485" className='hover:text-blue-500'>+91 9413917485</a> </span>
                 <span className='flex items-center gap-[10px] text-[15px] my-[5px]'><img src={mail} className='w-[30px]' alt="" /> <a href="mailto:z.careatyourhome@gmail.com" className='hover:text-blue-500 flex flex-wrap'>z.careatyourhome@gmail.com</a> </span>
                 <span className='flex items-center gap-[10px] text-[15px] '><img src={location} className='w-[33px]' alt="" /> <a
-                    href="https://www.google.com/maps/place/Guwahati,+Assam/@26.1429548,91.5380728,11z/data=!3m1!4b1!4m6!3m5!1s0x375a5a287f9133ff:0x2bbd1332436bde32!8m2!3d26.1157917!4d91.7085933!16zL20vMDNmeGZ5?entry=ttu"
+                    href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8851151,75.6257479,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?entry=ttu"
                     target='_blank'
                     rel='noopener noreferrer'
                     className='hover:text-blue-500'
-                >Assam,Guwahati</a> </span>
+                >Jaipur, Rajasthan</a> </span>
 
                 <span></span>
                 <span></span>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import hero from '/hero.png'
 import vector from '/Vector.png'
 import '../Css/Home.css'
@@ -9,8 +9,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../Components/Footer'
 import Context from '../Context/Context'
+import MapComponent from '../Components/Map.jsx'
+
 const Home = () => {
-    const value=useContext(Context)
+    const value = useContext(Context)
     const [service, setService] = useState([])
     const {
         register,
@@ -35,7 +37,7 @@ const Home = () => {
         } else {
             toast.error('Invalid Phone Number');
         }
- 
+
     }
 
     const getservice = async () => {
@@ -53,7 +55,7 @@ const Home = () => {
 
 
     return (
-        <div  className={`pt-[100px] bg-gray-200 ${value.toggle?'mt-[80px]':''} `}>
+        <div className={`pt-[100px] bg-gray-200 ${value.toggle ? 'mt-[80px]' : ''} `}>
             <ToastContainer />
             <div id='homeHead' className=' w-[100%]'>
                 <div className='relative '>
@@ -67,12 +69,12 @@ const Home = () => {
                             At ZeeCare, we are dedicated to transforming healthcare with personalized solutions designed for your unique needs. Our innovative approach combines expert care and a deep commitment to enhancing your well-being. Discover a new standard in healthcare where every detail is tailored to you. Join us in achieving better health, one step at a time.
                         </p>
                     </div>
-                    <div className='images2'> 
+                    <div className='images2'>
                         <img id='hero' src={hero} className='absolute right-[14vw] w-[300px] top-0 z-50 ' alt="" />
                         <img id='background' src={vector} className='absolute left-[55%] top-[-30%] w-[900px] -rotate-90' alt="" />
                     </div>
 
-                    <div id='whoweare'  className='flex  border-black mt-[200px] justify-around  items-center'>
+                    <div id='whoweare' className='flex  border-black mt-[200px] justify-around  items-center'>
                         <div id='biography' className='w-[34%]  border-black relative'>
                             <img src={biography} alt="" className='w-[200%]' />
                             {/* <img id='nurse' src="/nurse.png" className='absolute' alt="" /> */}
@@ -88,36 +90,36 @@ const Home = () => {
                         </div>
                     </div>
                     <div id='movinganime' className='whitespace-nowrap text-[90px] font-bold my-[100px] text-gray-700'>
-                       <ul className='inline-block '>
-                        <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>in</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block text-red-700'>Jaipur</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>only</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                       </ul>
-                       <ul className='inline-block '>
-                        <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>in</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block text-red-700'>Jaipur</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>only</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                       </ul>
-                       <ul className='inline-block '>
-                        <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>in</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block text-red-700'>Jaipur</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                        <li className='inline-block'>only</li>
-                        <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
-                       </ul>
+                        <ul className='inline-block '>
+                            <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>in</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block text-red-700'>Jaipur</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>only</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                        </ul>
+                        <ul className='inline-block '>
+                            <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>in</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block text-red-700'>Jaipur</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>only</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                        </ul>
+                        <ul className='inline-block '>
+                            <li className='inline-block'> <span className='text-red-700'>!!</span> Available</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>in</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block text-red-700'>Jaipur</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                            <li className='inline-block'>only</li>
+                            <li className='h-[40px] w-[40px] bg-gray-400 translate-y-[-5px] mx-[30px] rounded-full inline-block circle'></li>
+                        </ul>
                     </div>
                     <div id='departments' className=''>
                         <h1 className='text-gray-500 font-bold text-[25px] mb-[10px]'>Benefits</h1>
@@ -126,13 +128,13 @@ const Home = () => {
                                 service.length > 0 &&
                                 service.map((value, index) => {
                                     return (
-                                      
+
                                         <li key={index} id='upcase' className='relative h-[200px] w-[22.93%] hover:scale-[1.05] transition-scale duration-500 cursor-pointer'>
                                             <img src={value.url} className='w-full h-full  object-cover rounded-lg' alt="" />
                                             <h2 className='absolute bottom-[10px] bg-white w-full text-center'>{value.name}</h2>
                                         </li>
-                                        
-                                      
+
+
                                     )
                                 })
                             }
@@ -140,9 +142,9 @@ const Home = () => {
                         </ul>
                     </div>
 
-                    
 
-                 
+
+
                 </div>
             </div>
 
@@ -165,6 +167,7 @@ const Home = () => {
                     <input type="submit" value="Send" className='border rounded-lg cursor-pointer bg-gradient-to-tr from-white via-blue-600 to-white text-white w-fit mx-auto px-[10px] py-[5px]' />
                 </form>
             </div>
+
             <Footer />
         </div>
     )

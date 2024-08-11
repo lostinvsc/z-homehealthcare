@@ -38,9 +38,7 @@ const Navbar = () => {
         }, 30);
 
     }
-    if (value) {
-        console.log(value)
-    }
+
 
     const tf = () => {
         let logo = document.getElementById('logo')

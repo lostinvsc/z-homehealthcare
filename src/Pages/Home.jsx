@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../Components/Footer'
 import Context from '../Context/Context'
-import MapComponent from '../Components/Map.jsx'
+
 
 const Home = () => {
     const value = useContext(Context)

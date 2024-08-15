@@ -25,7 +25,7 @@ const Appointments = () => {
     const ageRejex = /^([1-9][0-9]?|1[01][0-9]|120)$/
 
     if (ageRejex.test(data.age)) {
-      let res = await axios.post('https://z-care.onrender.com/appointment', data, {
+      let res = await axios.post('https://z-back-1.onrender.com/appointment', data, {
         withCredentials: true,
       })
       if (res.data.status) {

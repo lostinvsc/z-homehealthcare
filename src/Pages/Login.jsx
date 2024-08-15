@@ -20,7 +20,7 @@ const Login = () => {
     } = useForm()
     const onSubmit = async (data) => {
    
-            let res = await axios.post('https://z-care.onrender.com/clientLogin', data, {
+            let res = await axios.post('https://z-back-1.onrender.com/clientLogin', data, {
                 withCredentials: true,
             })
             let message = res.data.message ; 

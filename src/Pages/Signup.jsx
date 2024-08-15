@@ -30,7 +30,7 @@ const Signup = () => {
         if (data.password.length < 6) {
           toast.error('Password must contain atleast 6 characters')
         } else {
-          let res = await axios.post('https://z-care.onrender.com/getcode', data, {
+          let res = await axios.post('https://z-back-1.onrender.com/getcode', data, {
             withCredentials: true,
           })
 
@@ -55,7 +55,7 @@ const Signup = () => {
 
   const verify = async () => {
     if (parseInt(code) == parseInt(inputCode)) {
-      let res = await axios.post('https://z-care.onrender.com/clientSignup', data, {
+      let res = await axios.post('https://z-back-1.onrender.com/clientSignup', data, {
         withCredentials: true,
       })
       let status = res.data.status;

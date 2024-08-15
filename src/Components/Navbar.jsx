@@ -14,7 +14,7 @@ const Navbar = () => {
     async function logout() {
         let con = confirm("Are you sure you want to logout")
         if (con) {
-            let res = await axios.get('https://z-care.onrender.com/logout', {
+            let res = await axios.get('https://z-back-1.onrender.com/logout', {
                 withCredentials: true,
             })
             if (res.data.status) {

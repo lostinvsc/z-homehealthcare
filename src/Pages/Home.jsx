@@ -25,7 +25,7 @@ const Home = () => {
     const onSubmit = async (data) => {
         const rejex = /^(?:\+91|91)?[-\s]?[6789]\d{9}$/;
         if (rejex.test(data.phone)) {
-            let res = await axios.post('https://z-care.onrender.com/message', data, {
+            let res = await axios.post('https://z-back-1.onrender.com/message', data, {
                 withCredentials: true,
             })
             if (res.data.status) {
@@ -41,7 +41,7 @@ const Home = () => {
     }
 
     const getservice = async () => {
-        let res = await axios.get('https://z-care.onrender.com/getservice', {
+        let res = await axios.get('https://z-back-1.onrender.com/getservice', {
             withCredentials: true,
         })
         if (res.data.status) {

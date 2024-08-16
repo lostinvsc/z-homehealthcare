@@ -38,11 +38,9 @@ const Appointments = () => {
       toast.error("Invalid age");
 
     }
-
-
   }
 
-  useEffect(() => {
+  const resize=()=>{
     if(window.innerWidth<=501){
       let apphero=document.getElementById('sec1img');
       let base=document.querySelector('.sec1d1');
@@ -50,8 +48,16 @@ const Appointments = () => {
       console.log(h)
       apphero.style.marginTop=`${h + 150}px`
         }
+  }
+
+  window.addEventListener("resize",resize)
+
+  useEffect(() => {
+resize()
   },[])
   
+
+
 
 
   return (

@@ -77,7 +77,7 @@ const Home = () => {
                     <div id='whoweare' className='flex  border-black mt-[200px] justify-around  items-center'>
                         <div id='biography' className='w-[34%]  border-black relative'>
                             <img src={biography} alt="" className='w-[200%]' />
-                            {/* <img id='nurse' src="/nurse.png" className='absolute' alt="" /> */}
+                            
                         </div>
                         <div id='text' className='w-[50%]  border-black relative z-100 bg-gray-200'>
                             <h5 className='font-light text-[20px]'>Biography</h5>

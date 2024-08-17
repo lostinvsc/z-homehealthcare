@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import Context from '../Context/Context'
 const Appointments = () => {
   const value=useContext(Context)
-  console.log(value)
+
   const navigate = useNavigate()
   const {
     register,
@@ -23,16 +23,23 @@ const Appointments = () => {
 
   const onSubmit = async (data) => {
     const ageRejex = /^([1-9][0-9]?|1[01][0-9]|120)$/
-
+    const phonerejex = /^(?:\+91|91)?[-\s]?[6789]\d{9}$/;
     if (ageRejex.test(data.age)) {
-      let res = await axios.post('https://z-back-1.onrender.com/appointment', data, {
-        withCredentials: true,
-      })
-      if (res.data.status) {
-        toast.success(res.data.message);
-        reset()
-      } else {
-        toast.error(res.data.message);
+      if (phonerejex.test(data.phone)){
+
+        let res = await axios.post('https://z-backend-is6p.onrender.com/appointment', data, {
+          withCredentials: true,
+        })
+        if (res.data.status) {
+          // toast.success(res.data.message);
+          toast.success("Our team will contact you within 10 mins.");
+
+          reset()
+        } else {
+          toast.error(res.data.message);
+        }
+      } else{
+        toast.error("Invalid Phone no.");
       }
     } else {
       toast.error("Invalid age");
@@ -45,7 +52,7 @@ const Appointments = () => {
       let apphero=document.getElementById('sec1img');
       let base=document.querySelector('.sec1d1');
       let h = base.getBoundingClientRect().height
-      console.log(h)
+ 
       apphero.style.marginTop=`${h + 150}px`
         }
   }
@@ -83,8 +90,8 @@ resize()
         <form onSubmit={handleSubmit(onSubmit)} className='w-[100%] mt-[30px] flex flex-col gap-[20px]'>
 
           <div id='name' className='flex justify-between w-[100%]'>
-            <input required {...register('firstname')} type="text" name='firstname' placeholder={`Patient's first name`} className='outline-none bg-white border border-gray-500 w-[45%] rounded-lg px-[20px] py-[5px] input ' />
-            <input required {...register('lastname')} type="text" name='lastname' placeholder={`Patient's last name`} className='outline-none bg-white border border-gray-500 w-[45%] rounded-lg px-[20px] py-[5px] input ' />
+            <input required {...register('firstname')} type="text" name='firstname' placeholder={`Patient's full name`} className='outline-none bg-white border border-gray-500 w-[45%] rounded-lg px-[20px] py-[5px] input ' />
+            <input required {...register('phone')} type="text" name='phone' placeholder={`Your contact number`} className='outline-none bg-white border border-gray-500 w-[45%] rounded-lg px-[20px] py-[5px] input ' />
           </div>
           <div id='dga' className='w-[100%] flex justify-between items-center'>
             <input required className='w-[45%] py-[6.6px] px-[14px] outline-none border border-gray-500 rounded-lg  desease' placeholder={`Patient's disease ( if nothing enter "none" )`} {...register('disease')} name="disease" id="disease" />

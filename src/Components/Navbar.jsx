@@ -1,31 +1,16 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import Context from '../Context/Context'
 import logo from '/logo.png'
-import axios from 'axios'
+
 import '../Css/Navbar.css'
-import Cookies from 'js-cookie'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
     const navigate = useNavigate();
     let value = useContext(Context);
 
-    async function logout() {
-        let con = confirm("Are you sure you want to logout")
-        if (con) {
-            let res = await axios.get('https://z-back-1.onrender.com/logout', {
-                withCredentials: true,
-            })
-            if (res.data.status) {
-                toast.success(res.data.message)
-                value.setCookie(Cookies.get("clientToken"))
-            } else {
-                toast.error(res.data.message)
-
-            }
-        }
-    }
+    const ref = useRef()
 
     const scroll = async () => {
 
@@ -42,11 +27,26 @@ const Navbar = () => {
 
     const tf = () => {
         let logo = document.getElementById('logo')
-        let login = document.getElementById('logintext')
-        login.classList.toggle('hidden')
+
         logo.classList.toggle('invisible')
         value.setToggle(!value.toggle)
     }
+
+    useEffect(() => {
+        if (window.innerWidth > 552) {
+            document.querySelector("#chup").classList.add("hidden")
+          } else {
+              document.querySelector("#chup").classList.remove("hidden")
+          }
+    }, [])
+    
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 552) {
+          document.querySelector("#chup").classList.add("hidden")
+        } else {
+            document.querySelector("#chup").classList.remove("hidden")
+        }
+    })
 
     return (
 
@@ -70,16 +70,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <div className='flex items-center gap-[20px]'>
-                <div id='logintext' className='h-fit px-[15px]  py-[5px] cursor-pointer box-border'>
-                    {
-                        !value.cookie ?
-                            <Link id='login' to='/login'>Login</Link>
-                            :
-                            <button onClick={() => { logout() }}>Logout</button>
-                    }
-                </div>
-
+            <div id="chup" ref={ref} className={`flex items-center gap-[20px]`}>
                 <div id='menu' className='w-[35px] flex items-center'>
                     <ul id='tbh' className={`flex font-light absolute left-0 mt-[0px] gap-[20px] w-[70%] flex-col items-start pl-[20px] ${value.toggle ? 'visible' : 'hidden'}`}>
                         <li className='cursor-pointer'>

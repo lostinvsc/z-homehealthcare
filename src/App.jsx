@@ -9,7 +9,7 @@ import Appointments from './Pages/Appointments.jsx'
 
 
 const App = () => {
-
+  const [service, setService] = useState([])
   const [toggle, setToggle] = useState(false)
   const router = createBrowserRouter([
     {
@@ -23,10 +23,22 @@ const App = () => {
     },
 
   ])
+  const getservice = async () => {
+    let res = await axios.get('https://z-backend-is6p.onrender.com/getservice', {
+      withCredentials: true,
+    })
+    if (res.data.status) {
+      setService(res.data.service)
+    }
+  }
+  useEffect(() => {
+    getservice()
+  }, [])
+
   return (
 
     <>
-      <Context.Provider value={{ toggle: toggle, setToggle: setToggle }}>
+      <Context.Provider value={{ toggle: toggle, setToggle: setToggle, service: service, setService: setService }}>
         <RouterProvider router={router} />
       </Context.Provider>
     </>

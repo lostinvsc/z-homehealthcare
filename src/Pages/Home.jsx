@@ -13,7 +13,7 @@ import Context from '../Context/Context'
 
 const Home = () => {
     const value = useContext(Context)
-    const [service, setService] = useState([])
+ 
     const {
         register,
         handleSubmit,
@@ -40,19 +40,6 @@ const Home = () => {
 
     }
 
-    const getservice = async () => {
-        let res = await axios.get('https://z-backend-is6p.onrender.com/getservice', {
-            withCredentials: true,
-        })
-        if (res.data.status) {
-            setService(res.data.service)
-
-        }
-    }
-    useEffect(() => {
-        getservice()
-    }, [])
-
 
     return (
         <div className={`pt-[100px] bg-gray-200 ${value.toggle ? 'mt-[80px]' : ''} `}>
@@ -61,12 +48,12 @@ const Home = () => {
                 <div className='relative '>
                     <div id='hp1s1' className='w-[560px] pt-[100px] relative z-10'>
                         <h1 className=''>
-                            Welcome to ZeeCare's <br /> Doorstep | Your
+                            Welcome to <span className='text-[rgb(50,118,181)]'>AdvanceCare's</span> <br /> Doorstep | Your
                             Trusted <span className='text-red-600'>Home</span> Healthcare
                             Provider
                         </h1>
                         <p className='font-light mt-[10px] text-[15px]'>
-                            At ZeeCare, we are dedicated to transforming healthcare with personalized solutions designed for your unique needs. Our innovative approach combines expert care and a deep commitment to enhancing your well-being. Discover a new standard in healthcare where every detail is tailored to you. Join us in achieving better health, one step at a time.
+                            At AdvanceCare, we are dedicated to transforming healthcare with personalized solutions designed for your unique needs. Our innovative approach combines expert care and a deep commitment to enhancing your well-being. Discover a new standard in healthcare where every detail is tailored to you. Join us in achieving better health, one step at a time.
                         </p>
                     </div>
                     <div className='images2'>
@@ -125,8 +112,8 @@ const Home = () => {
                         <h1 className='text-gray-500 font-bold text-[25px] mb-[10px]'>Benefits</h1>
                         <ul className='flex justify-between w-[100%] flex-wrap gap-y-[55px]'>
                             {
-                                service.length > 0 &&
-                                service.map((value, index) => {
+                                value.service.length > 0 &&
+                                value.service.map((value, index) => {
                                     return (
 
                                         <li key={index} id='upcase' className='relative h-[200px] w-[22.93%] hover:scale-[1.05] transition-scale duration-500 cursor-pointer'>

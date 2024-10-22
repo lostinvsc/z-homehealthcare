@@ -43,13 +43,13 @@ const Footer = () => {
                         <li>Sunday</li>
                     </ul>
                     <ul className='text-gray-600 font-light'>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
-                        <li>6:30AM - 11:00PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
+                        <li>12:00AM - 11:59PM</li>
 
                     </ul>
                 </div>
@@ -60,7 +60,7 @@ const Footer = () => {
                 <span className='flex items-center gap-[10px] text-[15px] '><img src={call} className='w-[30px]' alt="" /> <a href="tel:9413917485" className='hover:text-blue-500'>+91 9413917485 ,</a> </span>
                 
                 <span className='flex items-center gap-[10px] text-[15px] ml-[40px]'><a href="tel:7062192141" className='hover:text-blue-500'>+91 7062192141</a> </span>
-                <span className='flex items-center gap-[10px] text-[15px] my-[5px]'><img src={mail} className='w-[30px]' alt="" /> <a href="mailto:z.careatyourhome@gmail.com" className='hover:text-blue-500 flex flex-wrap'>z.careatyourhome@gmail.com</a> </span>
+                <span className='flex items-center gap-[10px] text-[15px] my-[5px]'><img src={mail} className='w-[30px]' alt="" /> <a href="mailto:z.careatyourhome@gmail.com" className='hover:text-blue-500 flex flex-wrap'>advancehealthcareathome@gmail.com</a> </span>
                 <span className='flex items-center gap-[10px] text-[15px] '><img src={location} className='w-[33px]' alt="" /> <a
                     href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8851151,75.6257479,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?entry=ttu"
                     target='_blank'

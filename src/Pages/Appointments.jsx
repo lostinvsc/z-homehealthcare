@@ -71,14 +71,14 @@ resize()
     <div id='ahead' className={`pt-[150px] w-[100%] ${value.toggle?'mt-[50px]':''}`}>
       <ToastContainer />
       <div id='sec1' className='flex items-center w-[100%] justify-between px-[65px]'>
-        <div className='w-[500px] sec1d1'>
+        <div className='w-[580px] sec1d1'>
           <h1 className='text-[35px] font-bold mb-[20px] leading-[55px]'>
             Schedule services <br />
-            at your <span className='text-red-600 '>doorstep</span> | ZeeCare <br /> home
+            at your <span className='text-red-600 '>doorstep</span> | AdvanceCare <br /> home
             Health Care Center
           </h1>
           <p className='text-gray-600 text-[15px]'>
-            Our website offers a user-friendly platform for easy appointment scheduling, allowing you to book, reschedule, or cancel appointments at your convenience. With real-time availability and instant confirmation, managing your appointments has never been easier. Access your personalized care plan, view upcoming appointments, and receive timely reminders to stay on top of your health. Experience a streamlined process designed to fit your busy lifestyle.
+          "Our website offers a user-friendly platform for easy appointment scheduling, providing you with the flexibility to book appointments at your convenience. With real-time availability and instant confirmation, you can manage your appointments more efficiently than ever before. The streamlined process ensures that everything is organized, making it easier to fit into your busy lifestyle and schedule. Our goal is to offer a seamless experience, allowing you to stay focused on your health without any added stress."
           </p>
         </div>
         <div id='sec1img' className='w-[400px] mr-[50px]'>
